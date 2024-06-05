@@ -1,4 +1,4 @@
-import Comment from './Comment.jsx'
+import Comment from '../Comment.jsx'
 
 function CommentSection() {
     return (
@@ -7,7 +7,7 @@ function CommentSection() {
         
             <p className="comments__count">Comments</p>
             <div className="comments__form-wrapper">
-                <img className="comments__form-avatar" src="src/assets/images/Mohan-muruge.jpg" alt="side profile of Mohan"/>
+                <img className="comments__form-profile-pic" src="src/assets/images/Mohan-muruge.jpg" alt="side profile of Mohan"/>
                 <form action="submit">
                     <label htmlFor="">Join the Conversation</label>
                     <textarea name="" id="" placeholder="Add a new comment"></textarea>

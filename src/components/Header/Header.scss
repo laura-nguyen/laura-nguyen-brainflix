@@ -1,0 +1,68 @@
+@import './../../styles/partials/_mixins.scss';
+@import './../../styles/partials/_typography.scss';
+@import './../../styles/partials/_variables.scss';
+
+.header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: orange; // reference 
+    
+    @include tablet {
+        padding: 2.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        max-width: 80rem;
+        padding: 2.25rem auto;
+    }
+}
+
+.header__logo {
+    max-width: 8.75rem;
+}
+
+.header__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+.header__search-bar {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+}
+
+.header__profile-pic {
+    @include avatar-style(2.25rem, 2.25rem, 1rem);
+    object-fit: cover;
+    object-position: 10%;
+    order: 2;
+    
+    @include tablet {
+        order: 3;
+    }
+
+
+}
+
+.header__button--upload {
+    order: 3;
+
+    @include tablet {
+        order: 2;
+   
+    }
+}

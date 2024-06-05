@@ -1,6 +1,6 @@
 import VideoItem from './VideoItem'
 
-function VideoList() {
+function VideoList(navigate) {
     return (
         <div className="video-list-wrapper">
             <h4 className="video-list__title">Next Videos</h4>

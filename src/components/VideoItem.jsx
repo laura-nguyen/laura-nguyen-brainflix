@@ -1,4 +1,4 @@
-function VideoList() {
+function VideoItem() {
     return (
         <div className="video-item-wrapper">
             <img className="video-item__img" src="" alt="" />

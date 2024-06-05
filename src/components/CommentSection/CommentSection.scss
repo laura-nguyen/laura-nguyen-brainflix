@@ -1,0 +1,17 @@
+@import './../../styles/partials/_mixins.scss';
+@import './../../styles/partials/_typography.scss';
+@import './../../styles/partials/_variables.scss';
+
+
+.comments__form-profile-pic {
+    @include avatar-style(2.25rem, 2.25rem, 1rem);
+    object-fit: cover;
+    object-position: 10%;
+    order: 2;
+    
+    @include tablet {
+        order: 3;
+    }
+
+
+}
