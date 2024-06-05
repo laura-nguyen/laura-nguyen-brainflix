@@ -1,4 +1,4 @@
-import VideoItem from './VideoItem'
+import VideoItem from '../VideoItem/VideoItem'
 
 function VideoList(navigate) {
     return (
