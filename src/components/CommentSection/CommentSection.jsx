@@ -1,6 +1,6 @@
-import Comment from '../Comment.jsx'
+import Comment from './../Comment/Comment.jsx'
 
-function CommentSection() {
+function CommentSection(video) {
     return (
 
         <div>
@@ -17,7 +17,8 @@ function CommentSection() {
 
             </div>
             <div className="comments__list">
-                <Comment/>
+                <Comment
+                    />
             </div>
 
         </div>   

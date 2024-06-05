@@ -1,4 +1,4 @@
-function Comment() {
+function Comment({id, name, comment, timestamp}) {
     return (
         <div className="comments__item">
                 <div className="comments__avatar--grey">
@@ -6,10 +6,10 @@ function Comment() {
                 </div>
                 <div className="comments__item-details">
                     <div className="comments__item-info">
-                        <p className="comments__item-name">author</p>
-                        <p className="comments__item-text">date</p>
+                        <p className="comments__item-name">{name}r</p>
+                        <p className="comments__item-text">{timestamp}</p>
                     </div>
-                    <p className="comments__item-text"></p>
+                    <p className="comments__item-text">{comment}</p>
 
                 </div>
 

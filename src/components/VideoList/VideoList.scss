@@ -1,0 +1,43 @@
+@import './../../styles/partials/_mixins.scss';
+@import './../../styles/partials/_typography.scss';
+@import './../../styles/partials/_variables.scss';
+
+
+
+// const VideoList = ({ videos }) => {
+//     return (
+//         <section className="video-list">
+//             <h4 className="video-list__title">Next Videos</h4>
+//             <div className="video-list__item-wrapper">
+//                 {videos.map((video) => (
+                    
+//                     <VideoItem 
+//                         key={video.id}
+//                         id={video.id}
+//                         image={video.image}
+//                         title={video.title}
+//                         channel={video.channel}
+//                     />
+//                 ))}
+//             </div>
+//         </section>
+//     );
+// }
+
+
+.video-list {
+    padding: 1rem;
+
+    &__title {
+        color: $silver;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 13px;
+
+        @include tablet {
+            font-size: .75rem;
+        }
+    }
+
+    
+}

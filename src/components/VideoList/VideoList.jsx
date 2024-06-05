@@ -1,19 +1,24 @@
-import VideoItem from '../VideoItem/VideoItem'
+import VideoItem from '../VideoItem/VideoItem';
+import './VideoList.scss';
 
-function VideoList(navigate) {
+const VideoList = ({ videos }) => {
     return (
-        <div className="video-list-wrapper">
+        <section className="video-list">
             <h4 className="video-list__title">Next Videos</h4>
             <div className="video-list__item-wrapper">
-                <VideoItem/>
-                <VideoItem/>
-                <VideoItem/>
-
+                {videos.map((video) => (
+                    
+                    <VideoItem 
+                        key={video.id}
+                        id={video.id}
+                        image={video.image}
+                        title={video.title}
+                        channel={video.channel}
+                    />
+                ))}
             </div>
-
-        </div>
-    )
-    
+        </section>
+    );
 }
 
-export default VideoList
+export default VideoList;

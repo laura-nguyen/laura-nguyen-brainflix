@@ -1,0 +1,64 @@
+@import './../../styles/partials/_mixins.scss';
+@import './../../styles/partials/_typography.scss';
+@import './../../styles/partials/_variables.scss';
+
+
+// return (
+//     <div 
+//         className="video-item" 
+//     >
+//         <img className="video-item__img" src={image} alt={`Thumbnail image of ${title} by ${channel}`} />
+//         <div>
+//             <h4 className="video-item__title">{title}</h4>
+//             <p className="video-item__author">{channel}</p>
+//         </div>
+//     </div>
+// );
+// }
+
+
+.video-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 3.5rem;
+    padding: 0.5rem 0;
+    @include tablet {
+        font-size: .875rem;
+    }
+
+    &__text {
+        font-size: .8125rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+
+        @include tablet {
+            font-size: .875rem;
+        }
+
+    }
+
+    &__img {
+        background-color: $mercury;
+        border-radius: .25rem;
+      
+
+
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+
+        font-weight: 600;
+    }
+
+    &__author {
+        margin: 0;
+        padding: 0;
+       
+    }
+}
