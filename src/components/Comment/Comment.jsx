@@ -1,4 +1,7 @@
-function Comment({name, comment, timestamp}) {
+import "./Comment.scss";
+
+
+const Comment = ({name, comment, timestamp}) => {
 
     const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" })
 
