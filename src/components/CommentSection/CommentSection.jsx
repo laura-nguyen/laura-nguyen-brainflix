@@ -6,15 +6,15 @@ function CommentSection(mainVideo) {
     const comments = mainVideo.comments;
     return (
 
-        <div>
+        <div className='comment-section'>
         
-            <p className="comments__count">{comments.length} Comments</p>
-            <div className="comments__form-wrapper">
+            <p className="comment-section__count">{comments.length} Comments</p>
+            <div className="comment-section__form-wrapper">
                 <img className="comments__form-profile-pic" src="src/assets/images/Mohan-muruge.jpg" alt="side profile of Mohan"/>
                 <form action="submit">
                     <label htmlFor="">Join the Conversation</label>
                     <textarea name="" id="" placeholder="Add a new comment"></textarea>
-                    <button className="comments__submit"></button>
+                    <button className="comments__button--submit">Submit</button>
                 </form>
 
 
