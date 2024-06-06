@@ -10,9 +10,9 @@ function App() {
   const [mainVideo, setMainVideo] = useState(videos[0]);
 
 
-  const changeMainVideo = (idPassed) => {
+  const changeMainVideo = (id) => {
     const foundVideo = videos.find((video) => {
-        return video.id === idPassed;
+        return video.id === id;
     });
 
     setMainVideo(foundVideo);
@@ -39,9 +39,9 @@ function App() {
         timestamp={mainVideo.timestamp}
       />
 
+
       <CommentsSection 
         comments={mainVideo.comments}
-        changeMainVideo={changeMainVideo}
       />
 
       <VideoList 

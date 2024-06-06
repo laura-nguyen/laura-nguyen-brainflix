@@ -83,14 +83,9 @@
     }
   
     &__avatar {
-      &--img {
-        @include avatar-style(2.25rem, 2.25rem, 1rem);
-        object-fit: cover;
-        object-position: 10%;
-      }
   
       &--grey {
-        @include avatar-style(2.25rem, 2.25rem, 0);
+        @include avatar-style(2.25rem, 2.25rem, 1rem);
         background-color: $mercury;
       }
     }

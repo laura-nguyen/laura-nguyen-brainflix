@@ -3,9 +3,6 @@
 @import './styles/partials/variables.scss';
 @import './components/Header/Header.scss' ;
 
-
-
-  
 body {
     margin: 0;
     padding: 0;
@@ -13,20 +10,4 @@ body {
     font-family: 'Avenir Next LT Pro', sans-serif;
 
 }
-  
 
-  
-
-  input, textarea {
-    border-radius: .25rem;
-    border: 1px solid $mercury;
-    font-family: inherit;
-    background-color: $alabaster;
-
-  }
-
-  ::placeholder {
-    color: $brainflix-black;
-  }
-
-  
