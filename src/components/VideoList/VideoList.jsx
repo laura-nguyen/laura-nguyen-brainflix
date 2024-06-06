@@ -1,7 +1,8 @@
 import VideoItem from '../VideoItem/VideoItem';
 import './VideoList.scss';
 
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos, changeMainVideo }) => {
+
     return (
         <section className="video-list">
             <h4 className="video-list__title">Next Videos</h4>
@@ -14,6 +15,7 @@ const VideoList = ({ videos }) => {
                         image={video.image}
                         title={video.title}
                         channel={video.channel}
+                        changeMainVideo={changeMainVideo}
                     />
                 ))}
             </div>

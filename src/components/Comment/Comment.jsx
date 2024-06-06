@@ -1,4 +1,8 @@
-function Comment({id, name, comment, timestamp}) {
+function Comment({name, comment, timestamp}) {
+
+    const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" })
+
+
     return (
         <div className="comments__item">
                 <div className="comments__avatar--grey">
@@ -6,8 +10,8 @@ function Comment({id, name, comment, timestamp}) {
                 </div>
                 <div className="comments__item-details">
                     <div className="comments__item-info">
-                        <p className="comments__item-name">{name}r</p>
-                        <p className="comments__item-text">{timestamp}</p>
+                        <p className="comments__item-name">{name}</p>
+                        <p className="comments__item-date">{formattedDate}</p>
                     </div>
                     <p className="comments__item-text">{comment}</p>
 
