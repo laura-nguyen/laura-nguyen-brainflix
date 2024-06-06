@@ -3,7 +3,7 @@ import './App.scss';
 import videos from './data/video-details.json';
 import Header from './components/Header/Header';
 import MainVideo from './components/MainVideo/MainVideo';
-import CommentSection from './components/CommentSection/CommentSection';
+import CommentsSection from './components/CommentsSection/CommentsSection';
 import VideoList from './components/VideoList/VideoList';
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
         timestamp={mainVideo.timestamp}
       />
 
-      <CommentSection 
+      <CommentsSection 
         comments={mainVideo.comments}
         changeMainVideo={changeMainVideo}
       />

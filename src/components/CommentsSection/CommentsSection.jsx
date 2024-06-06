@@ -1,9 +1,10 @@
-import Comment from './../Comment/Comment.jsx'
-import './CommentSection.scss'
+import Comment from '../Comment/Comment.jsx'
+import './CommentsSection.scss'
 
-function CommentSection(mainVideo) {
+function CommentsSection(mainVideo) {
 
     const comments = mainVideo.comments;
+
     return (
 
         <div className='comment-section'>
@@ -20,6 +21,8 @@ function CommentSection(mainVideo) {
 
             </div>
             <div className="comments__list">
+
+                return 
 
             {comments.map((comment) => (
     
@@ -43,4 +46,4 @@ function CommentSection(mainVideo) {
 
 
 
-export default CommentSection
+export default CommentsSection
