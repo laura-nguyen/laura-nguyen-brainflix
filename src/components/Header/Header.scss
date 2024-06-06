@@ -4,95 +4,135 @@
 
 .header {
     padding: 1rem;
-   
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $white; 
     
     @include tablet {
-        padding: 2.25rem;
+        padding: 1rem 1.5rem;
         flex-direction: row;
         justify-content: space-between;
     }
 
     @include desktop {
+        margin: 0 auto;
         max-width: 80rem;
         padding: 2.25rem auto;
     }
-}
 
-.header__logo {
-    max-width: 8.75rem;
-    padding-bottom: 1rem;
-}
+    &__logo {
+        max-width: 8.75rem;
+        padding-bottom: 1rem;
 
-.header__content {
-    width: 100%;
-
-    align-items: center;
-    
-
-    @include tablet {
-       
-      
-    }
-}
-
-
-
-.header__search-bar {
-  
-    width: 80%;
-    padding: 0.5rem;
-    background: url('../../assets/icons/search.svg') no-repeat 10px center / 20px 20px;
-
-    @include tablet {
-        float: none;
-    }
-}
-
-.header__profile-pic {
-    @include avatar-style(2.25rem, 2.25rem, 1rem);
-    object-fit: cover;
-    object-position: 10%;
-    order: 2;
-   
-    
-    @include tablet {
-        order: 3;
-        float: none;
+        @include tablet {
+            padding-bottom: 0;
+        }
     }
 
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-}
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            width: auto;
+            gap: 1.5rem;
+        }
+    }
 
-.header__button--upload {
-    background: url('../../assets/icons/upload.svg') no-repeat 10px center / 20px 20px;
-    margin-top: 1rem;
-    border-radius: .25rem;
-    padding: 0 2rem;
-    width: 100%;
-    height: 2.5rem;
-    border: none;
-    font-size: 13px;
-    font-family: inherit;
-    font-weight: $demi;
-    text-transform: uppercase;
-    background-color: $brainflix-blue;
-    color: $white;
-   
-    cursor: pointer;
-
-
-    order: 3;
-
-    @include tablet {
+    &__search-profile {
+        display: flex;
+        align-items: center;
+        width: 100%;
         order: 2;
-        width: 9.375rem;
+        gap: 1rem;
+
+        @include tablet {
+            width: auto;
+            order: 1;
+        }
+    }
+
+    &__search-bar {
+        padding: 0.75rem;
+        padding-left: 2.5rem; 
+        background: url('../../assets/icons/search.svg') no-repeat 10px center / 20px 20px;
+        font-family: inherit;
+        border: 1px solid $mercury;
+        flex-grow: 1;
+        border-radius: .25rem; 
+        background-color: $alabaster;
+        color: $brainflix-black;
+        resize: none;
+    
+        @include tablet {
+            width: 15rem;
+        }
+
+        &::placeholder {
+            color: $brainflix-black;
+            font-size: 0.8125rem;
+
+            @include tablet {
+                font-size: 0.875rem;
+            }
+        }
+
+        &:active {
+            border: .125rem solid $brainflix-blue; // doesn't look blue
+        }
+    }
+
+    &__profile-pic {
+        @include avatar-style(2.25rem, 2.25rem, 0);
+        object-fit: cover;
+        object-position: 10%;
+        order: 2;
+
+        &--mobile {
+            display: block;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
+        }
+    }
+
+    &__button--upload {
+        margin-top: 1rem;
+        background: url('../../assets/icons/upload.svg') no-repeat 10px center / 20px 20px;
+        border-radius: .25rem;
         padding: 0 2rem;
-   
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        font-size: 13px;
+        font-family: inherit;
+        font-weight: $demi;
+        text-transform: uppercase;
+        background-color: $brainflix-blue;
+        color: $white;
+        cursor: pointer;
+        order: 3;
+
+        @include tablet {
+            order: 2;
+            width: 9.375rem;
+            padding: 0 2rem;
+            margin-top: 0;
+        }
     }
 }
-
-
