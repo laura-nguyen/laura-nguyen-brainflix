@@ -4,9 +4,9 @@ import './VideoList.scss';
 const VideoList = ({ videos, changeMainVideo }) => {
 
     return (
-        <section className="video-list">
+        <nav className="video-list">
             <h4 className="video-list__title">Next Videos</h4>
-            <div className="video-list__item-wrapper">
+            <ul className="video-list__item-wrapper">
                 {videos.map((video) => (
                     
                     <VideoItem 
@@ -18,8 +18,8 @@ const VideoList = ({ videos, changeMainVideo }) => {
                         changeMainVideo={changeMainVideo}
                     />
                 ))}
-            </div>
-        </section>
+            </ul>
+        </nav>
     );
 }
 

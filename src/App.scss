@@ -51,6 +51,12 @@ input, textarea {
       
 }
 
+ul, li, a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
 .app--tablet {
     @include tablet {
         display: flex;
