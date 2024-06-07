@@ -2,16 +2,33 @@
 @import './../../styles/partials/_typography.scss';
 @import './../../styles/partials/_variables.scss';
 
+.main-video__player-wrapper {
+    background-color: $brainflix-darkblack;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
 .main-video__player {
     width: 100%;
+    object-fit: cover;
 
+    @include tablet {
+        object-fit: contain;
+        width: 88%;
+        
+    }
+
+    @include desktop {
+        width: 67%;
+    }
+    
+  
 }
 
 .main-video__content {
     padding: 1rem;
-    
 }
-
 
 .main-video__info {
     display: flex;
@@ -19,34 +36,33 @@
     gap: 2rem;
     border: $border;
     border-style: solid none;
-    
+    color: $silver;
+
+    @include tablet {
+        justify-content: space-between;
+    }
+}
+
+.main-video__upload {
+    @include tablet {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.main-video__author {
+    font-weight: 700;
+    color: $brainflix-darkblack;
+}
+
+.main-video__stats {
+    @include tablet {
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 .main-video__views, .main-video__likes {
     display: flex;
     gap: 0.5rem;
-
 }
-
-
-// <div className="main-video__content">
-// <h1 className="main-video__title">{title}</h1>
-// <div className="main-video__info">
-//     <div className="main-video__upload">
-//         <p className="main-video__author">{channel}</p>
-//         <p className="main-video__date">{timestamp}</p>
-//     </div>
-//     <div className="main-video__stats">
-//         <div className="main-video__views">
-//             <img src="src/assets/icons/views.svg" alt="views icon" />
-//             <p className="main-video__views-count">{views}</p>
-//         </div>
-//         <div className="main-video__likes">
-//             <img src="src/assets/icons/likes.svg" alt="likes icon" />
-//             <p className="main-video__likes-count">{likes}</p>
-//         </div>
-//     </div>
-// </div>
-// <p className="main-video__description">{description}</p>
-
-// </div>

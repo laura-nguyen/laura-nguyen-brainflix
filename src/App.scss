@@ -3,11 +3,61 @@
 @import './styles/partials/variables.scss';
 @import './components/Header/Header.scss' ;
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $white;
     font-family: 'Avenir Next LT Pro', sans-serif;
 
 }
 
+
+button {
+    border: none;
+    font-family: inherit;
+    border-radius: .25rem; 
+    height: 2.5rem;
+    padding: 0 2rem;
+    font-size: .75rem;
+    font-weight: $demi;
+    text-transform: uppercase;
+    background-color: $brainflix-blue !important;
+    color: $white !important;
+    
+}
+
+input, textarea {
+    border: $border; 
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: $alabaster !important;
+    color: $brainflix-black;
+
+    &:focus  {
+        border: .125rem solid $brainflix-blue !important;
+        background-color: $white !important;
+
+    }
+
+    &::placeholder {
+        color: $brainflix-black !important;
+        font-size: .75rem !important;
+
+        @include tablet {
+          font-size: 0.875rem;
+        }
+      }
+    
+      
+}
+
+
+.app--desktop {
+    @include desktop {
+        display: flex;
+
+    }
+    
+
+}

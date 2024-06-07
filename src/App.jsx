@@ -27,27 +27,31 @@ function App() {
     <>
       <Header />  
 
-      <MainVideo
-        title={mainVideo.title}
-        channel={mainVideo.channel}
-        image={mainVideo.image}
-        description={mainVideo.description}
-        views={mainVideo.views}
-        likes={mainVideo.likes}
-        duration={mainVideo.duration}
-        video={mainVideo.video}
-        timestamp={mainVideo.timestamp}
-      />
 
 
-      <CommentsSection 
-        comments={mainVideo.comments}
-      />
+      
 
-      <VideoList 
-        videos={filteredVideos}
-        changeMainVideo={changeMainVideo}
-      /> 
+          <MainVideo
+            title={mainVideo.title}
+            channel={mainVideo.channel}
+            image={mainVideo.image}
+            description={mainVideo.description}
+            views={mainVideo.views}
+            likes={mainVideo.likes}
+            duration={mainVideo.duration}
+            video={mainVideo.video}
+            timestamp={mainVideo.timestamp}
+          />
+          <div className="app--desktop">
+          <CommentsSection
+            comments={mainVideo.comments}
+          />
+    
+        <VideoList
+          videos={filteredVideos}
+          changeMainVideo={changeMainVideo}
+        />
+      </div>
 
 
     </>
