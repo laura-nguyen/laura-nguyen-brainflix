@@ -50,7 +50,7 @@
       @include flex-layout(row, space-between);
       font-size: 0.8125rem;
       border-bottom: $border;
-      padding: 1rem 0 0.5rem;
+      padding: 0.75rem 0 0.5rem;
       gap: 1rem;
       flex-grow: 0;
   
@@ -90,7 +90,7 @@
     &__avatar {
   
       &--grey {
-        @include avatar-style(2.25rem, 2.25rem, 1rem);
+        @include avatar-style(2.25rem, 2.25rem, 0);
         background-color: $mercury;
       }
     }

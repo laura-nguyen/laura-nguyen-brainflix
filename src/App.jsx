@@ -50,7 +50,8 @@ function App() {
             description={mainVideo.description}
             views={mainVideo.views}
             likes={mainVideo.likes}
-            timestamp={mainVideo.timestamp}/>
+            timestamp={mainVideo.timestamp}
+            />
           <CommentsSection
             comments={mainVideo.comments}
           />

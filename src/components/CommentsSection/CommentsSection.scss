@@ -3,7 +3,7 @@
 @import './../../styles/partials/_variables.scss';
 
 .comments-section {
-    padding: 1rem;
+    padding: 0 1rem 0.5rem;
 
     @include desktop {
         padding: 0;
@@ -13,6 +13,8 @@
 
 .comments-section__count {
     font-weight: 600;
+    font-size: .8125rem;
+    padding-bottom: 1rem;
 }
 
 .comments-section__form-profile-pic {
@@ -48,7 +50,7 @@
       color: $silver;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 0.625rem;
+      font-size: .6875rem;
       margin: 0.125rem 0;
   
       @include tablet {
@@ -58,8 +60,7 @@
   
     &__input {
 
-        height: 5rem;
-
+        height: 6rem;
    
       border-radius: 0.25rem;
       margin: 0.125rem 0 0;
@@ -121,7 +122,7 @@
     border-radius: .25rem;
     padding: 0 2rem;
     width: 100%;
-    height: 2.5rem;
+    height: 2.25rem;
     border: none;
     font-size: 13px;
     font-family: inherit;
@@ -140,30 +141,9 @@
         order: 2;
         width: 9.375rem;
         padding: 0 2rem;
+        height: 2.5rem;
         margin-bottom: 0;
    
     }
 }
   
-//   <div className='comments-section'>
-//   <p className="comments-section__count">{comments.length} Comments</p>
-//   <div className="comments-section__form-wrapper">
-//       <img className="comments-section__form-profile-pic" src="src/assets/images/Mohan-muruge.jpg" alt="side profile of Mohan" />
-//       <form className="comments-section__form" action="submit">
-//           <label className="comments-section__label" htmlFor="comment">Join the Conversation</label>
-//           <textarea className="comments-section__textarea" name="comment" placeholder="Add a new comment"></textarea>
-//           <button className="comments-section__button-submit">Submit</button>
-//       </form>
-//   </div>
-//   <div className="comments-section__list">
-//       {comments.map((comment) => (
-//           <Comment
-//               key={comment.id}
-//               name={comment.name}
-//               comment={comment.comment}
-//               timestamp={comment.timestamp}
-//           />
-//       ))}
-//   </div>
-// </div>
-// );

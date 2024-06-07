@@ -2,29 +2,7 @@
 @import './../../styles/partials/_typography.scss';
 @import './../../styles/partials/_variables.scss';
 
-.main-video__player-wrapper {
-    background-color: $brainflix-darkblack;
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-}
 
-.main-video__player {
-    width: 100%;
-    object-fit: cover;
-
-    @include tablet {
-        object-fit: contain;
-        width: 88%;
-        
-    }
-
-    @include desktop {
-        width: 67%;
-    }
-    
-  
-}
 
 .main-video__content {
     padding: 1rem;
@@ -34,13 +12,22 @@
     }
 }
 
+.main-video__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+
+}
+
 .main-video__info {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
     border: $border;
     border-style: solid none;
+    font-size: 0.8125rem;;
     color: $silver;
+    padding: 1rem 0;
 
     @include tablet {
         justify-content: space-between;
@@ -60,11 +47,13 @@
 }
 
 .main-video__author {
-    font-weight: 700;
+    font-weight: 600;
     color: $brainflix-darkblack;
+    padding-bottom: 1rem;
 }
 
 .main-video__stats {
+  
     @include tablet {
         display: flex;
         gap: 1rem;
@@ -72,6 +61,32 @@
 }
 
 .main-video__views, .main-video__likes {
+    
     display: flex;
     gap: 0.5rem;
+}
+
+.main-video__date {
+    color: $silver;
+}
+
+.main-video__likes {
+    
+    &-count {
+        color: $silver;
+    }
+}
+
+.main-video__views {
+    padding-bottom: 1rem;
+    &-count {
+        color: $silver;
+    }
+}
+
+.main-video__description {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    padding-top: 1rem;
+    
 }

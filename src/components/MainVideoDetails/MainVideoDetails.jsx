@@ -1,7 +1,7 @@
 import "./MainVideoDetails.scss";
 
 const MainVideoDetails = ({ title, channel, description, views, likes, timestamp}) => {
-    const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" });
+    const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" })
 
     return (
       
