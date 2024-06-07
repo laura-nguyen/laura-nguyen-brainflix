@@ -1,7 +1,6 @@
 @import './styles/partials/mixins.scss';
 @import './styles/partials/typography.scss';
 @import './styles/partials/variables.scss';
-@import './components/Header/Header.scss' ;
 
 * {
     margin: 0;
@@ -52,10 +51,21 @@ input, textarea {
       
 }
 
+.app--tablet {
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+
+}
 
 .app--desktop {
     @include desktop {
         display: flex;
+        padding: 0 8rem;
+
 
     }
     

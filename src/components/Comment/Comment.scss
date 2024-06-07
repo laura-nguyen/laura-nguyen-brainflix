@@ -57,6 +57,11 @@
       @include tablet {
         font-size: 0.875rem;
       }
+
+      @include desktop {
+        border-top: $border;
+        border-bottom: none;
+      }
   
       &-info {
         @include flex-layout(row, space-between);

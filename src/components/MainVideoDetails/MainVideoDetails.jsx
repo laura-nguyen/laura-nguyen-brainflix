@@ -1,15 +1,10 @@
-import "./MainVideo.scss";
+import "./MainVideoDetails.scss";
 
-const MainVideo = ({ title, channel, image, description, views, likes, duration, video, timestamp }) => {
+const MainVideoDetails = ({ title, channel, description, views, likes, timestamp}) => {
     const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" });
 
     return (
-        <main className="main-video">
-            <div className="main-video__player-wrapper">
-                <video className="main-video__player" controls poster={image}>
-                    <source src={video} type="video/mp4" />
-                </video>
-            </div>
+      
             <div className="main-video__content">
                 <h1 className="main-video__title">{title}</h1>
                 <div className="main-video__info">
@@ -30,8 +25,7 @@ const MainVideo = ({ title, channel, image, description, views, likes, duration,
                 </div>
                 <p className="main-video__description">{description}</p>
             </div>
-        </main>
     );
 };
 
-export default MainVideo;
+export default MainVideoDetails;

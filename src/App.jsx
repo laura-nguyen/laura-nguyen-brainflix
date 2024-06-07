@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './App.scss';
 import videos from './data/video-details.json';
 import Header from './components/Header/Header';
-import MainVideo from './components/MainVideo/MainVideo';
+import MainVideoPlayer from './components/MainVideoPlayer/MainVideoPlayer';
+import MainVideoDetails from './components/MainVideoDetails/MainVideoDetails';
 import CommentsSection from './components/CommentsSection/CommentsSection';
 import VideoList from './components/VideoList/VideoList';
 
@@ -31,7 +32,7 @@ function App() {
 
       
 
-          <MainVideo
+          <MainVideoPlayer
             title={mainVideo.title}
             channel={mainVideo.channel}
             image={mainVideo.image}
@@ -43,15 +44,24 @@ function App() {
             timestamp={mainVideo.timestamp}
           />
           <div className="app--desktop">
+          <div className="app--tablet">
+            <MainVideoDetails title={mainVideo.title}
+            channel={mainVideo.channel}
+            description={mainVideo.description}
+            views={mainVideo.views}
+            likes={mainVideo.likes}
+            timestamp={mainVideo.timestamp}/>
           <CommentsSection
             comments={mainVideo.comments}
           />
+          </div>
     
         <VideoList
           videos={filteredVideos}
           changeMainVideo={changeMainVideo}
         />
-      </div>
+        </div>
+      
 
 
     </>

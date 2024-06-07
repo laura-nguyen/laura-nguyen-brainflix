@@ -30,6 +30,10 @@
             padding-bottom: 0;
         }
 
+        @include desktop {
+        width: 8.75rem;
+        }
+
       
     }
 

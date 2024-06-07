@@ -28,6 +28,13 @@
 .video-list {
     padding: 1rem;
 
+    @include desktop{
+        border-left: $border;
+        width: 85rem;
+     
+    }
+
+
     &__title {
         color: $silver;
         text-transform: uppercase;
@@ -37,6 +44,9 @@
         @include tablet {
             font-size: .75rem;
         }
+        
+
+        
     }
 
     
