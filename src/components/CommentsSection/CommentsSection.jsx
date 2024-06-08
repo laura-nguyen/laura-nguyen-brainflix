@@ -15,7 +15,7 @@ const CommentsSection = ({ comments }) => {
                     </div>
                 </form>
             </div>
-            <div className="comments-section__list">
+            <ul className="comments-section__list">
                 {comments.map((comment) => (
                     <Comment
                         key={comment.id}
@@ -24,7 +24,7 @@ const CommentsSection = ({ comments }) => {
                         timestamp={comment.timestamp}
                     />
                 ))}
-            </div>
+            </ul>
         </div>
     );
 }

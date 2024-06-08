@@ -23,6 +23,10 @@ button {
     text-transform: uppercase;
     background-color: $brainflix-blue !important;
     color: $white !important;
+
+    &:hover {
+        background-color: $brainflix-darkblue !important;
+    }
     
 }
 
@@ -63,6 +67,10 @@ ul, li, a {
         flex-direction: column;
 
     }
+
+    @include desktop {
+        width: 70%; 
+    }
     
 
 }
@@ -70,9 +78,9 @@ ul, li, a {
 .app--desktop {
     @include desktop {
         display: flex;
-        padding: 0 8rem;
-
-
+        width: 80rem;
+        margin: 0 auto;
+        padding-bottom: 3rem;
     }
     
 

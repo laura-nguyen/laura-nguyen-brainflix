@@ -7,7 +7,7 @@ const Comment = ({name, comment, timestamp}) => {
 
 
     return (
-        <div className="comments__item">
+        <li className="comments__item">
                 <div className="comments__avatar--grey">
 
                 </div>
@@ -20,8 +20,8 @@ const Comment = ({name, comment, timestamp}) => {
 
                 </div>
 
-        </div>
+        </li>
     )
 }
 
-export default Comment
+export default Comment;

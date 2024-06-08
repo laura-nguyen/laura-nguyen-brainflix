@@ -9,17 +9,18 @@
     gap: 1rem;
     height: 4.6875rem;
     padding: 0.5rem 0;
+    cursor: pointer;
+    
     @include tablet {
         font-size: .875rem;
         width: 38vw;
         
- 
-
        
     }
 
     @include desktop {
-        height: 4.5rem;
+        padding: 0.75rem 0;
+        height: 5.5rem;
         width: 100%;
 
     }
