@@ -10,7 +10,6 @@ import VideoList from './components/VideoList/VideoList';
 function App() {
   const [mainVideo, setMainVideo] = useState(videos[0]);
 
-
   const changeMainVideo = (id) => {
     const foundVideo = videos.find((video) => {
         return video.id === id;
@@ -20,7 +19,6 @@ function App() {
   };
 
   const filteredVideos = videos.filter((video) => {
-
       return video.id !== mainVideo.id;
   });
 
@@ -28,45 +26,37 @@ function App() {
     <>
       <Header />  
 
-
-
+      <MainVideoPlayer
+        image={mainVideo.image}
+        video={mainVideo.video}
+        timestamp={mainVideo.timestamp}
+      />
       
-
-          <MainVideoPlayer
-            title={mainVideo.title}
-            channel={mainVideo.channel}
-            image={mainVideo.image}
-            description={mainVideo.description}
-            views={mainVideo.views}
-            likes={mainVideo.likes}
-            duration={mainVideo.duration}
-            video={mainVideo.video}
-            timestamp={mainVideo.timestamp}
+      <div className="app--desktop">
+        <div className="app--tablet">
+          <MainVideoDetails 
+          title={mainVideo.title}
+          channel={mainVideo.channel}
+          description={mainVideo.description}
+          views={mainVideo.views}
+          likes={mainVideo.likes}
+          timestamp={mainVideo.timestamp}
           />
-          <div className="app--desktop">
-          <div className="app--tablet">
-            <MainVideoDetails title={mainVideo.title}
-            channel={mainVideo.channel}
-            description={mainVideo.description}
-            views={mainVideo.views}
-            likes={mainVideo.likes}
-            timestamp={mainVideo.timestamp}
-            />
+
           <CommentsSection
             comments={mainVideo.comments}
           />
-          </div>
+        </div>
     
         <VideoList
           videos={filteredVideos}
           changeMainVideo={changeMainVideo}
         />
-        </div>
-      
 
+        </div>
 
     </>
   )
 }
 
-export default App
+export default App;

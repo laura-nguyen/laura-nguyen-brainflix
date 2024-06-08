@@ -1,9 +1,6 @@
 import './VideoItem.scss';
 
-const VideoItem = ({ id, image, title, channel, changeMainVideo}) => {
-
-  
-
+const VideoItem = ({ id, image, title, channel, changeMainVideo }) => {
     return (
         <li 
             className="video-item" 

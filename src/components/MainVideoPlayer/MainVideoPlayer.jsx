@@ -1,6 +1,6 @@
 import "./MainVideoPlayer.scss";
 
-const MainVideoPlayer = ({image, duration, video, timestamp }) => {
+const MainVideoPlayer = ({image, video, timestamp }) => {
     const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" });
 
     return (

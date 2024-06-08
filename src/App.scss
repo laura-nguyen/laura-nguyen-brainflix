@@ -27,7 +27,6 @@ button {
     &:hover {
         background-color: $brainflix-darkblue !important;
     }
-    
 }
 
 input, textarea {
@@ -40,19 +39,17 @@ input, textarea {
     &:focus  {
         border: .125rem solid $brainflix-blue !important;
         background-color: $white !important;
-
+        outline: none;
     }
 
     &::placeholder {
         color: $brainflix-black !important;
         font-size: .75rem !important;
-
+        
         @include tablet {
           font-size: 0.875rem;
         }
-      }
-    
-      
+    }   
 }
 
 ul, li, a {
@@ -65,14 +62,11 @@ ul, li, a {
     @include tablet {
         display: flex;
         flex-direction: column;
-
     }
 
     @include desktop {
         width: 70%; 
     }
-    
-
 }
 
 .app--desktop {
@@ -82,6 +76,4 @@ ul, li, a {
         margin: 0 auto;
         padding-bottom: 3rem;
     }
-    
-
 }
