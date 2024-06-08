@@ -7,6 +7,11 @@
 .main-video__content {
     padding: 1rem;
 
+    @include tablet {
+        padding: 1.5rem 2.25rem;
+
+    }
+
     @include desktop {
         padding: 0;
     }
@@ -17,6 +22,13 @@
     line-height: 2rem;
     padding-bottom: 1rem;
 
+    @include tablet {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+        padding-bottom: 0;
+
+    }
+
 }
 
 .main-video__info {
@@ -25,13 +37,14 @@
     gap: 2rem;
     border: $border;
     border-style: solid none;
-    font-size: 0.8125rem;;
+    font-size: 0.8125rem;
     color: $silver;
     padding: 1rem 0;
 
     @include tablet {
         justify-content: space-between;
         border-style: none none solid;
+        font-size: .875rem;
 
     }
     @include desktop {
@@ -50,6 +63,10 @@
     font-weight: 600;
     color: $brainflix-darkblack;
     padding-bottom: 1rem;
+
+    @include tablet {
+        padding-bottom: 0;
+    }
 }
 
 .main-video__stats {
@@ -79,6 +96,10 @@
 
 .main-video__views {
     padding-bottom: 1rem;
+
+    @include tablet {
+        padding-bottom: 0;
+    }
     &-count {
         color: $silver;
     }
@@ -88,5 +109,10 @@
     font-size: 0.8125rem;
     line-height: 1.125rem;
     padding-top: 1rem;
+
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
     
 }

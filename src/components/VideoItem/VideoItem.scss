@@ -2,21 +2,6 @@
 @import './../../styles/partials/_typography.scss';
 @import './../../styles/partials/_variables.scss';
 
-
-// return (
-//     <div 
-//         className="video-item" 
-//     >
-//         <img className="video-item__img" src={image} alt={`Thumbnail image of ${title} by ${channel}`} />
-//         <div>
-//             <h4 className="video-item__title">{title}</h4>
-//             <p className="video-item__author">{channel}</p>
-//         </div>
-//     </div>
-// );
-// }
-
-
 .video-item {
     display: flex;
     justify-content: space-between;
@@ -26,8 +11,9 @@
     padding: 0.5rem 0;
     @include tablet {
         font-size: .875rem;
-        min-height: 5rem;
-        width: 40%;
+        width: 38vw;
+        
+ 
 
        
     }
@@ -40,6 +26,7 @@
 
     &__text {
         font-size: .8125rem;
+        line-height: 1.125rem;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -48,6 +35,7 @@
 
         @include tablet {
             font-size: .875rem;
+           
         }
 
     }

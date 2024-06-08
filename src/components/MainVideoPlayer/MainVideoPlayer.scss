@@ -15,7 +15,7 @@
 
     @include tablet {
         object-fit: contain;
-        width: 88%;
+        width: calc(100% - 4.5rem);
         
     }
 

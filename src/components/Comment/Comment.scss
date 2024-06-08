@@ -56,6 +56,7 @@
   
       @include tablet {
         font-size: 0.875rem;
+        padding: 1.5rem 0 1rem;
       }
 
       @include desktop {
@@ -92,6 +93,11 @@
       &--grey {
         @include avatar-style(2.25rem, 2.25rem, 0);
         background-color: $mercury;
+
+        @include tablet {
+            @include avatar-style(2.5rem, 2.5rem, 0);
+            
+        }
       }
     }
   

@@ -9,7 +9,7 @@
     align-items: center;
     
     @include tablet {
-        padding: 1rem 3rem;
+        padding: 1rem 2.25rem;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -108,7 +108,7 @@
 
             @include tablet {
                 display: block;
-                @include avatar-style(3rem, 3rem, 0);
+                @include avatar-style(2.5rem, 2.5rem, 0);
                 
         
             }

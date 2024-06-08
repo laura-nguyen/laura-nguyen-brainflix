@@ -3,30 +3,13 @@
 @import './../../styles/partials/_variables.scss';
 
 
-
-// const VideoList = ({ videos }) => {
-//     return (
-//         <section className="video-list">
-//             <h4 className="video-list__title">Next Videos</h4>
-//             <div className="video-list__item-wrapper">
-//                 {videos.map((video) => (
-                    
-//                     <VideoItem 
-//                         key={video.id}
-//                         id={video.id}
-//                         image={video.image}
-//                         title={video.title}
-//                         channel={video.channel}
-//                     />
-//                 ))}
-//             </div>
-//         </section>
-//     );
-// }
-
-
 .video-list {
     padding: 1rem 1rem 2rem;
+
+    @include tablet {
+        padding: 1rem 1rem 2rem;
+
+    }
 
     @include desktop{
         border-left: $border;
@@ -45,6 +28,8 @@
 
         @include tablet {
             font-size: .75rem;
+            padding-bottom: 1rem;
+
         }
         
 
