@@ -6,7 +6,7 @@ const MainVideoDetails = ({ title, channel, description, views, likes, timestamp
     const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" });
 
     return (
-        <div className="main-video__content">
+        <main className="main-video__content">
             <h1 className="main-video__title">{title}</h1>
             <div className="main-video__info">
                 <div className="main-video__upload">
@@ -25,7 +25,7 @@ const MainVideoDetails = ({ title, channel, description, views, likes, timestamp
                 </div>
             </div>
             <p className="main-video__description">{description}</p>
-        </div>
+        </main>
     );
 };
 

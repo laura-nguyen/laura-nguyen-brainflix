@@ -1,4 +1,3 @@
-import Header from './../../components/Header/Header';
 import MainVideoPlayer from './../../components/MainVideoPlayer/MainVideoPlayer';
 import MainVideoDetails from './../../components/MainVideoDetails/MainVideoDetails';
 import CommentsSection from './../../components/CommentsSection/CommentsSection';
