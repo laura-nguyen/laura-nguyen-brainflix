@@ -15,34 +15,24 @@ import UploadPage from "./pages/UploadPage/UploadPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
-  
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<VideoPage />}>
-            <Route path="/videos/:videoId" element={<VideoPage />} />
-      </Route>
-      <Route path="/upload" element={<UploadPage/>} />
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
-  </BrowserRouter>
-
-  const [mainVideo, setMainVideo] = useState(videos[0]);
-
-  const changeMainVideo = (id) => {
-    const foundVideo = videos.find((video) => {
-        return video.id === id;
-    });
-
-    setMainVideo(foundVideo);
-  };
-
-  const filteredVideos = videos.filter((video) => {
-      return video.id !== mainVideo.id;
-  });
 
   return (
     <>
+     
+
+
+      <BrowserRouter>
       <Header />  
+      <Routes>
+        <Route path="/" element={<VideoPage />}>
+              <Route path="/videos/:videoId" element={<VideoPage />} />  
+        </Route>
+        <Route path="/upload" element={<UploadPage/>} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+ 
+      {/* <Header />  
 
       <MainVideoPlayer
         image={mainVideo.image}
@@ -71,7 +61,7 @@ function App() {
           changeMainVideo={changeMainVideo}
         />
 
-        </div>
+        </div> */}
 
     </>
   )
