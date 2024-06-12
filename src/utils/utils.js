@@ -5,5 +5,5 @@ export const getVideoDetails = () => API_URL + "videos/?api_key=" + API_KEY;
 
 export const getVideoEndpoint = (id) => API_URL + "videos/" + `${id}/` + "?api_key=" + API_KEY;
 
-
+export const postComment = (id) => API_URL + "videos/" + `${id}/` + "comments/" + "?api_key=" + API_KEY;
 

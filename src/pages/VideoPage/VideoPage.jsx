@@ -1,7 +1,5 @@
 import MainVideoPlayer from './../../components/MainVideoPlayer/MainVideoPlayer';
-import MainVideoDetails from './../../components/MainVideoDetails/MainVideoDetails';
-import CommentsSection from './../../components/CommentsSection/CommentsSection';
-import VideoList from './../../components/VideoList/VideoList';
+import VideoContent from './../../components/VideoContent/VideoContent';
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -42,22 +40,10 @@ const selectedVideoId = videoId || videos[0].id;
         selectedVideoId={selectedVideoId}
       />
       
-      <div className="app--desktop">
-        <div className="app--tablet">
-          <MainVideoDetails 
-          selectedVideoId={selectedVideoId}
-          />
-
-          <CommentsSection
-            selectedVideoId={selectedVideoId}
-          />
-        </div>
-    
-        <VideoList
-          videos={filteredVideos}
-        />
-
-        </div>
+      <VideoContent
+        selectedVideoId={selectedVideoId}
+        filteredVideos={filteredVideos}
+      />
 
     </>
 )}

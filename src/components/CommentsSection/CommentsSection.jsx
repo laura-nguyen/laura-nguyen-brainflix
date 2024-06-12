@@ -2,49 +2,51 @@ import Comment from '../Comment/Comment.jsx'
 import './CommentsSection.scss'
 import profilePic from '../../assets/images/Mohan-muruge.jpg';
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import axios from "axios";
 
-import { getVideoEndpoint } from '../../utils/utils.js';
+import { postComment } from '../../utils/utils.js';
 
-const CommentsSection = ({ selectedVideoId }) => {
+const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
 
-    const [mainVideo, setMainVideo] = useState(null);
-
-    const getMainVideo = async (videoId) => {
-        try {
-            let res = await axios.get(getVideoEndpoint(videoId));
-
-
-            setMainVideo(res.data);
-        } catch (err) {
-            console.log(err);
-        }
-    };
-
-
-    useEffect(() => {
-       
-        getMainVideo(selectedVideoId);
-    }, [selectedVideoId]); 
-    
-    if (!mainVideo) {
-        return <p>loading...</p>;
-      }
+    const [ comment, setComment ] = useState("")
 
     const comments = mainVideo.comments;
 
+    const handleCommentSubmit = async (event) => {
+    
+        event.preventDefault();
+
+        const newComment = {
+            name: "Mohan Muruge", 
+            comment
+        }
+
+        try {
+            const res = await axios.post(postComment(selectedVideoId), newComment) 
+            console.log(res.data);
+            setMainVideo((previousComment) => ({
+                ...previousComment , comments: [res.data, ...previousComment.comments]
+            }))
+            setComment("");
+
+        }
+        catch(error) {
+            console.log(error);
+        }
+ 
+    }
 
     return (
         <div className='comments-section'>
             <p className="comments-section__count">{mainVideo.comments.length} Comments</p>
             <div className="comments-section__form-wrapper">
                 <img className="comments-section__form-profile-pic" src={profilePic} alt="side profile of Mohan" />
-                <form className="comments-section__form" action="submit">
+                <form className="comments-section__form" onSubmit={handleCommentSubmit}>
                     <label className="comments-section__label" htmlFor="comment">Join the Conversation</label>
                     <div className="comment-section__add-comment">
-                        <textarea className="comments-section__input" name="comment" placeholder="Add a new comment"></textarea>
+                        <textarea className="comments-section__input" name="comment" placeholder="Add a new comment" value={comment} onChange={(event) => { setComment(event.target.value)}}></textarea>
                         <button className="comments-section__button-submit">Comment</button>
                     </div>
                 </form>

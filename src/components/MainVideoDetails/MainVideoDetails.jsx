@@ -8,31 +8,7 @@ import { useState, useEffect } from "react";
 
 import axios from "axios";
 
-const MainVideoDetails = ({ selectedVideoId }) => {
-
-    const [mainVideo, setMainVideo] = useState(null);
-
-    const getMainVideo = async (videoId) => {
-        try {
-
-            let res = await axios.get(getVideoEndpoint(videoId));
-
-            setMainVideo(res.data);
-        } catch (err) {
-            console.log(err);
-        }
-    };
-
-  
-
-    useEffect(() => {
-        getMainVideo(selectedVideoId);
-    }, [selectedVideoId]); 
-
-    if (!mainVideo) {
-        return <p>loading...</p>;
-      }
-
+const MainVideoDetails = ({ mainVideo }) => {
 
     
     const formattedDate = new Date(mainVideo.timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" });

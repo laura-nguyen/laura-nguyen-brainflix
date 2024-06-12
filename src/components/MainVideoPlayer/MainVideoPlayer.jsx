@@ -7,9 +7,7 @@ import axios from "axios";
 
 const MainVideoPlayer = ({ selectedVideoId }) => {
 
-
     const [mainVideo, setMainVideo] = useState(null);
-
 
     const getMainVideo = async (videoId) => {
         try {
