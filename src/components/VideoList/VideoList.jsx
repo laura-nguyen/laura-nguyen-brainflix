@@ -1,7 +1,7 @@
 import VideoItem from '../VideoItem/VideoItem';
 import './VideoList.scss';
 
-const VideoList = ({ videos, changeMainVideo }) => {
+const VideoList = ({ videos }) => {
 
     return (
         <nav className="video-list">
@@ -15,7 +15,6 @@ const VideoList = ({ videos, changeMainVideo }) => {
                         image={video.image}
                         title={video.title}
                         channel={video.channel}
-                        changeMainVideo={changeMainVideo}
                     />
                 ))}
             </ul>

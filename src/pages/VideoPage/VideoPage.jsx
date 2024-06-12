@@ -3,57 +3,58 @@ import MainVideoDetails from './../../components/MainVideoDetails/MainVideoDetai
 import CommentsSection from './../../components/CommentsSection/CommentsSection';
 import VideoList from './../../components/VideoList/VideoList';
 
-import { useState } from 'react';
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import videos from './../../data/video-details.json';
+import { getVideoDetails } from '../../utils/utils';
+
+import axios from 'axios';
 
 const VideoPage = () => {
 
-  const [mainVideo, setMainVideo] = useState(videos[0]);
+  const [videos, setVideos] = useState([]);
 
-  const changeMainVideo = (id) => {
-    const foundVideo = videos.find((video) => {
-        return video.id === id;
-    });
+  const { videoId } = useParams();
 
-    setMainVideo(foundVideo);
-  };
+  const getVideos = async () => {
+    let res = await axios.get(getVideoDetails());
+    setVideos(res.data);
+};
+
+useEffect(() => {
+  getVideos();
+}, []);
+
+if (videos.length < 1) {
+  return <p>loading...</p>;
+}
+
+const selectedVideoId = videoId || videos[0].id;
 
   const filteredVideos = videos.filter((video) => {
-      return video.id !== mainVideo.id;
+      return video.id !== selectedVideoId;
   });
-
-
 
     return (
     <>
-     
 
       <MainVideoPlayer
-        image={mainVideo.image}
-        video={mainVideo.video}
-        timestamp={mainVideo.timestamp}
+        selectedVideoId={selectedVideoId}
       />
       
       <div className="app--desktop">
         <div className="app--tablet">
           <MainVideoDetails 
-          title={mainVideo.title}
-          channel={mainVideo.channel}
-          description={mainVideo.description}
-          views={mainVideo.views}
-          likes={mainVideo.likes}
-          timestamp={mainVideo.timestamp}
+          selectedVideoId={selectedVideoId}
           />
 
           <CommentsSection
-            comments={mainVideo.comments}
+            selectedVideoId={selectedVideoId}
           />
         </div>
     
         <VideoList
           videos={filteredVideos}
-          changeMainVideo={changeMainVideo}
         />
 
         </div>

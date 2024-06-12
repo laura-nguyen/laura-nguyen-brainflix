@@ -2,29 +2,61 @@ import "./MainVideoDetails.scss";
 import viewsIcon from "./../../assets/icons/views.svg";
 import likesIcon from "./../../assets/icons/likes.svg";
 
-const MainVideoDetails = ({ title, channel, description, views, likes, timestamp }) => {
-    const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" });
+import { getVideoEndpoint } from "../../utils/utils";
+
+import { useState, useEffect } from "react";
+
+import axios from "axios";
+
+const MainVideoDetails = ({ selectedVideoId }) => {
+
+    const [mainVideo, setMainVideo] = useState(null);
+
+    const getMainVideo = async (videoId) => {
+        try {
+
+            let res = await axios.get(getVideoEndpoint(videoId));
+
+            setMainVideo(res.data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+  
+
+    useEffect(() => {
+        getMainVideo(selectedVideoId);
+    }, [selectedVideoId]); 
+
+    if (!mainVideo) {
+        return <p>loading...</p>;
+      }
+
+
+    
+    const formattedDate = new Date(mainVideo.timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" });
 
     return (
         <main className="main-video__content">
-            <h1 className="main-video__title">{title}</h1>
+            <h1 className="main-video__title">{mainVideo.title}</h1>
             <div className="main-video__info">
                 <div className="main-video__upload">
-                    <p className="main-video__author">{`By ${channel}`}</p>
+                    <p className="main-video__author">{`By ${mainVideo.channel}`}</p>
                     <p className="main-video__date">{formattedDate}</p>
                 </div>
                 <div className="main-video__stats">
                     <div className="main-video__views">
                         <img src={viewsIcon} alt="views icon" />
-                        <p className="main-video__views-count">{views}</p>
+                        <p className="main-video__views-count">{mainVideo.views}</p>
                     </div>
                     <div className="main-video__likes">
                         <img src={likesIcon} alt="likes icon" />
-                        <p className="main-video__likes-count">{likes}</p>
+                        <p className="main-video__likes-count">{mainVideo.likes}</p>
                     </div>
                 </div>
             </div>
-            <p className="main-video__description">{description}</p>
+            <p className="main-video__description">{mainVideo.description}</p>
         </main>
     );
 };
