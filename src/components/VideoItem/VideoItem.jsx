@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const VideoItem = ({ id, image, title, channel }) => {
     return (
-        <li className="video-item">
-            <Link to={`/videos/${id}`}>
+        <li >
+            <Link to={`/videos/${id}`} className="video-item">
                 <img className="video-item__img" src={image} alt={`Thumbnail image of ${title} by ${channel}`} />
                 <div className='video-item__text'>
                     <h4 className="video-item__title">{title}</h4>

@@ -12,7 +12,7 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
 
     const [ comment, setComment ] = useState("")
 
-    const comments = mainVideo.comments;
+    const comments = mainVideo.comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
     const handleCommentSubmit = async (event) => {
     
@@ -25,7 +25,6 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
 
         try {
             const res = await axios.post(postComment(selectedVideoId), newComment) 
-            console.log(res.data);
             setMainVideo((previousComment) => ({
                 ...previousComment , comments: [res.data, ...previousComment.comments]
             }))
