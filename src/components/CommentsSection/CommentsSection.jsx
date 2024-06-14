@@ -45,7 +45,7 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
                 <form className="comments-section__form" onSubmit={handleCommentSubmit}>
                     <label className="comments-section__label" htmlFor="comment">Join the Conversation</label>
                     <div className="comment-section__add-comment">
-                        <textarea className="comments-section__input" name="comment" placeholder="Add a new comment" value={comment} onChange={(event) => { setComment(event.target.value)}}></textarea>
+                        <textarea className="comments-section__input" name="comment" id="comment" placeholder="Add a new comment" value={comment} onChange={(event) => { setComment(event.target.value)}}></textarea>
                         <button className="comments-section__button-submit">Comment</button>
                     </div>
                 </form>

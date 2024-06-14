@@ -161,6 +161,10 @@
 
         line-height: 1.25rem;
         margin-bottom: 1rem;
+
+        &.error {
+            border: 1px solid #D22D2D;
+        }
        
             @include tablet {
                 margin-bottom: 1rem;
@@ -200,6 +204,10 @@
         box-sizing: border-box;
         line-height: 1.25rem;
         resize: none;
+
+        &.error {
+            border: 1px solid #D22D2D;
+        }
             @include tablet {
                 height: 5.625rem;
 

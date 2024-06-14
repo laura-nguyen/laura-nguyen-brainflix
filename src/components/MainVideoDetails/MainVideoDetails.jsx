@@ -2,12 +2,6 @@ import "./MainVideoDetails.scss";
 import viewsIcon from "./../../assets/icons/views.svg";
 import likesIcon from "./../../assets/icons/likes.svg";
 
-import { getVideoEndpoint } from "../../utils/utils";
-
-import { useState, useEffect } from "react";
-
-import axios from "axios";
-
 const MainVideoDetails = ({ mainVideo }) => {
 
     
