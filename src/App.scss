@@ -57,23 +57,3 @@ ul, li, a {
     text-decoration: none;
 }
 
-
-.app--tablet {
-    @include tablet {
-        display: flex;
-        flex-direction: column;
-    }
-
-    @include desktop {
-        width: 70%; 
-    }
-}
-
-.app--desktop {
-    @include desktop {
-        display: flex;
-        width: 80rem;
-        margin: 0 auto;
-        padding-bottom: 3rem;
-    }
-}
