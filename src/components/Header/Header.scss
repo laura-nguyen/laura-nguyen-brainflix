@@ -122,15 +122,15 @@
         cursor: pointer;
         order: 3;
         border: none;
-    font-family: inherit;
-    border-radius: .25rem; 
-    height: 2.5rem;
-    padding: 0 2rem;
-    font-size: .75rem;
-    font-weight: $demi;
-    text-transform: uppercase;
-    background-color: $brainflix-blue !important;
-    color: $white !important;
+        font-family: inherit;
+        border-radius: .25rem; 
+        height: 2.5rem;
+        padding: 0 2rem;
+        font-size: .75rem;
+        font-weight: $demi;
+        text-transform: uppercase;
+        background-color: $brainflix-blue !important;
+        color: $white !important;
 
     &:hover {
         background-color: $brainflix-darkblue !important;
