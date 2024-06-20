@@ -31,7 +31,7 @@ const UploadPage = () => {
     };
 
     return (
-        <div className="upload-wrapper">
+        <main className="upload-wrapper">
             <h1 className="upload__header">Upload Video</h1>
             <div className="upload__content-wrapper">
                 <div className="upload__thumbnail-wrapper">
@@ -60,7 +60,7 @@ const UploadPage = () => {
                 <button form="uploadForm" className="form__btn--publish" type="submit">Publish</button>
                 <button form="uploadForm" className="form__btn--cancel" type="button" onClick={handleCancel}>Cancel</button>
             </div>
-        </div>
+        </main>
     );
 };
 
