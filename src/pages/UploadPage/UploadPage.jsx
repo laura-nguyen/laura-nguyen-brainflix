@@ -30,7 +30,6 @@ const UploadPage = () => {
 
         try {
             const res = await axios.post(postVideo(), newVideo) 
-            console.log(res.data)
         }
         catch(error) {
             console.log(error);
