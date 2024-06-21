@@ -110,11 +110,29 @@
     
   }
 
+  .comments__item-reaction {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .comments__item-like-wrapper {
+    display: flex;
+    gap: 0.5rem;
+  }
 
   .comments__item-button--like {
     background-image: url("./../../assets/icons/likes.svg");
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    height: auto !important;
+
   }
 
   .comments__item-button--delete {
-    background-image: url("./../../assets/icons/close_fullscreen.svg");
+    background-image: url("./../../assets/icons/delete.svg");
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    height: auto !important;
   }

@@ -21,7 +21,10 @@ const Comment = ({name, comment, timestamp}) => {
                     </div>
                     <p className="comments__item-text">{comment}</p>
                     <div className="comments__item-reaction">
-                        <button className="comments__item-button--like"></button>
+                        <div className="comments__item-like-wrapper">
+                            <button className="comments__item-button--like"></button>
+                            <p>0</p>
+                        </div>
                         <button className="comments__item-button--delete"></button>
 
                     </div>
