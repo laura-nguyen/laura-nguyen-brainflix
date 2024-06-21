@@ -25,6 +25,7 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
 
         try {
             const res = await axios.post(postComment(selectedVideoId), newComment) 
+            console.log(res.data)
             setMainVideo((previousComment) => ({
                 ...previousComment , comments: [res.data, ...previousComment.comments]
             }))

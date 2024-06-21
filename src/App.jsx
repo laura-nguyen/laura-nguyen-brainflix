@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.scss';
@@ -10,15 +9,6 @@ import UploadPage from "./pages/UploadPage/UploadPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
-
-  // const baseURL = import.meta.env.VITE_API_URL; 
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const { data } = await axios.get(`${baseURL}/videos`);
-  //   }
-  //   fetchData();
-  // }, [])
 
   return (
     <>
