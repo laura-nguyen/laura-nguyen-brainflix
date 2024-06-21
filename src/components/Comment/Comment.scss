@@ -109,3 +109,12 @@
   
     
   }
+
+
+  .comments__item-button--like {
+    background-image: url("./../../assets/icons/likes.svg");
+  }
+
+  .comments__item-button--delete {
+    background-image: url("./../../assets/icons/close_fullscreen.svg");
+  }

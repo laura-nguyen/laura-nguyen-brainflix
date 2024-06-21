@@ -6,5 +6,8 @@ export const getVideoEndpoint = (id) => `${API_URL}videos/${id}`;
 
 export const postComment = (id) => `${API_URL}videos/${id}/comments`;
 
+export const deleteComment = (videoId, commentId) => `${API_URL}videos/${videoId}/comments/${commentId}`;
+
 export const postVideo = () => `${API_URL}videos`;
+
 

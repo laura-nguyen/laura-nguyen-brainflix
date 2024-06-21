@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import axios from "axios";
 
-import { postComment } from '../../utils/utils.js';
+import { postComment, deleteComment } from '../../utils/utils.js';
 
 const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
 

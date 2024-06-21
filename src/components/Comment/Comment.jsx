@@ -1,9 +1,13 @@
 import "./Comment.scss";
-
+import { deleteComment } from "../../utils/utils";
 
 const Comment = ({name, comment, timestamp}) => {
 
-    const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" })
+    const formattedDate = new Date(timestamp).toLocaleString("en-US", { year: "numeric", month: "numeric", day: "numeric" });
+
+
+
+
 
     return (
         <li className="comments__item">
@@ -16,6 +20,11 @@ const Comment = ({name, comment, timestamp}) => {
                         <p className="comments__item-date">{formattedDate}</p>
                     </div>
                     <p className="comments__item-text">{comment}</p>
+                    <div className="comments__item-reaction">
+                        <button className="comments__item-button--like"></button>
+                        <button className="comments__item-button--delete"></button>
+
+                    </div>
                 </div>
 
         </li>
