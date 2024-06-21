@@ -25,6 +25,7 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
 
         try {
             const res = await axios.post(postComment(selectedVideoId), newComment) 
+    
             setMainVideo((previousComment) => ({
                 ...previousComment , comments: [res.data, ...previousComment.comments]
             }))
@@ -38,7 +39,7 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
     }
 
     return (
-        <div className='comments-section'>
+        <section className='comments-section'>
             <p className="comments-section__count">{mainVideo.comments.length} Comments</p>
             <div className="comments-section__form-wrapper">
                 <img className="comments-section__form-profile-pic" src={profilePic} alt="side profile of Mohan" />
@@ -60,7 +61,7 @@ const CommentsSection = ({mainVideo, selectedVideoId, setMainVideo}) => {
                     />
                 ))}
             </ul>
-        </div>
+        </section>
     );
 }
 
