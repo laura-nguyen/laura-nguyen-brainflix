@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import uploadVideoThumbnail from "./../../assets/images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
 import './UploadPage.scss';
+import axios from 'axios';
+import  { postVideo } from "./../../utils/utils.js";
 
 const UploadPage = () => {
     const navigate = useNavigate();
     const [errors, setErrors] = useState({ title: false, description: false });
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         
         const title = event.target.uploadVideoTitle.value;
@@ -20,6 +22,20 @@ const UploadPage = () => {
             alert('Please fill out both the title and description fields.');
             return;
         }
+
+        const newVideo = {
+            title, 
+            description
+        }
+
+        try {
+            const res = await axios.post(postVideo(), newVideo) 
+            console.log(res.data)
+        }
+        catch(error) {
+            console.log(error);
+        }
+        
 
         alert('Video uploaded successfully!');
         navigate('/');
